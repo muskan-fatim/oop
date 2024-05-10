@@ -45,22 +45,23 @@ ans.push(persnality.q3)
 ans.push(persnality.q4)
 ans.push(persnality.q5)
 class person{
-  constructor( public name:string, public person:string){
+  constructor( public name:string, public behave :string){
   }
   meet(){
-    `Dear ${this.name} your personality match to the  ${person} person`
+    return `Dear ${this.name} your personality match to the  ${this.behave} person`
   }
 }
-
-
+ const person2 = new person(persnality.name,"extrovert")
+  const person1 = new person(persnality.name ,"introvert")
 
 let final:boolean = ans.every(value => introvert.includes(value));
 let final2 = ans.every(value =>extrovert.includes(value))
 if(final === true){
-  const person1 = new person(persnality.name ,"introvert")
+  console.log(person1.meet())
 }
 else if(final2 === true){
- const person2 = new person(persnality.name,"extrovert")
+    console.log(person2.meet())
+
 }
 else{
    console.log("we can't find your personality ");
